@@ -93,3 +93,14 @@
 * Deploy
   * How to deploy
 * Optional: Animations and Testing
+
+## Typescript
+* Typescript is used in Angular
+* TS is a super set to JS, it has more features than Vanilla
+* It has dynamic typing so it will differintiate in code
+* It is not ran in Browser so it will be compiled to JS so it will run in the Browser
+
+## Bootstrap
+* Bootstrap is a CSS framework which will be used for the sake of styling
+* To install `npm install --save bootstrap@version-number`
+* To use it in the project, go to the angular.json file changes the styles array value contains default value buit we will add the bootstrap location putting it as the first element to prioritize `node_modules/bootstrap/dist/css/bootstrap.min.css`
