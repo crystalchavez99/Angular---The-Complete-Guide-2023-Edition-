@@ -114,4 +114,15 @@ export class SomeComponent {}
 ```
   * Can not wrap line but looks like nothing has changed
   * If you want to wrap use back ticks instead of single quotation marks
-* External file is preferred 
+* External file is preferred
+
+## Component Styles
+* We can use Bootstrap framework or anything, but we also have the properties for styleUrl for css files
+* We can style in the component.css file using CSS code, we can overwite while using Bootstrap
+* Just like template internal or external, same can be done with CSS
+```Typescript
+    styleUrl: ['./servers.component.css']
+    // or
+    styles: 'h3{color: darkblue;}'
+```
+* External file is preferred
