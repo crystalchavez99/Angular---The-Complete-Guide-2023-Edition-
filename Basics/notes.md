@@ -126,3 +126,14 @@ export class SomeComponent {}
     styles: 'h3{color: darkblue;}'
 ```
 * External file is preferred
+
+## Fully Understanding the Component Selector
+* We don't have to use this type of selector, it is the same selector we use as in css for selecting a element
+* We are not limited to selecting by element, we could put them into square brackets to use attribute selector
+  * `[app-name]`
+* When we do change to an attribute and try to still use the component as a css selector it will not work because we changed to an attribute
+  * To make it work we would have to apply it to a div or other element and add it as an attribute
+  * `<div app-name></div>`
+* We cane make it be selected as class and apply to an element with the class of it to still render in the app
+  * ID won't work and psuedo won work
+* We will normally use element style
