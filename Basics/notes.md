@@ -52,3 +52,18 @@
     * This will hold the template code of the component, we can add any content
   * The `templateURL` I can now point to the HTML file where to find: `./name.component.HTML`
 * With this we created our first component
+
+## Understand Role of AppModule and Component Declaration
+* To use our created component we need to change something of our app module
+* What is the app module?
+  * Users use modules to bundle different pices of app into a package
+* The App Module bundles the functionalities of our app and gives info which features the app should have and use
+* It is just a empty class and we transform it into a Module by adding the `@NgModule` decorator
+* It has four properties we set up on the object which we pass in the NGModule
+  * Declarations, imports, providers, and bootstrap
+  * We seen bootstrap tell Angular to see which component to be aware of when the app starts
+* Now we still need to register our component in the module here so Angular knows it exists
+* We register new components in the `declarations` array, by default the AppComponent is registered  it is part of the app
+  * We would add our components we created to the `declarations`, thought adding it there is not enough as Angular knows its part of app TS doesn't know where to find it
+  * We need to import our component at the top, we can omit .ts
+  * We can finally use our component now
