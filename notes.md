@@ -60,4 +60,36 @@
 * If nothing displays check console it will tell you an error, somehow Angular doesnt understand ngModels.
   * It is built in but it is split up into multiple modules, we need to add certain features into the app
   * To add a feature we go into the Module.TS file where we tell Angular which pieces belong to our app and add it to imports
-    * Tells Angular we want to import some features 
+    * Tells Angular we want to import some features
+
+## Course Structure [NOT ANGULAR NOTE RELATED]
+* Basics
+  * Components
+  * Data Binding
+  * How does it all work?
+  * How are they connected?
+* Components and Data Binding
+  * App is made of components
+  * data binding is output data in dom
+* Directives
+  * NgModel is a directive and other more, how to build our own
+* Servies and Dependecny Injection
+  * Have different pieces in app to communication and centralize
+  * Manage state of app
+* Routing
+  * All in one page but different urls
+* Observables
+  * Work with async code
+* Forms
+  * Handling forms
+* Pipes
+  * Transform output on runtime
+* HTTP
+  * Store database and reach out to web server
+  * Angular cant connect to database
+* Authentication
+* Optimization & NgModules
+  * Manage different Modules
+* Deploy
+  * How to deploy
+* Optional: Animations and Testing
