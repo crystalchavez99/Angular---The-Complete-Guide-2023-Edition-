@@ -87,3 +87,17 @@ export class SomeComponent {}
   * We can add the selector name we gave as an HTML element <app-name>
 * Based on the examples, app-server is our own selector we created and should now recompile where we see the component there
 * That's how we use our component then with their selector after adding to app module and displaying on the html file
+
+## Create components with CLI & Nesting Components
+* We learnt how to use by hand, now we use the alternative by the CLI command
+* To help apply this, we're going to aply this in a nest component where we can have a list to store detail components
+* To generate a component: `ng generate` this command allows us to generate some elements supported by Angular
+  * `ng generate component <name>` create a new component or `ng g c (name)`
+  * This will give us the new folder and the same files we have for app component
+* Now that we created it with the CLI, what if we wanted to put one of the previous components we made into the newly made one
+  * Overwrite default text and put in the component selector
+* We need to update app mpoule, CLI should do this automatically
+  * Import and declaration is done for us alreaedy
+* With the created component representing as the parent to nest our children components inside we go to the component.ts to check the selector
+* We can go to the `app.component.html` and update the selector to use the new one instead of the old
+  * Looks the same now except we nested the same component twice showing two of them now
