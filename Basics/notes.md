@@ -67,3 +67,23 @@
   * We would add our components we created to the `declarations`, thought adding it there is not enough as Angular knows its part of app TS doesn't know where to find it
   * We need to import our component at the top, we can omit .ts
   * We can finally use our component now
+
+## Working with Standalone Components
+* Components can be built in a different way using Standalone
+* Standalone Components is that you can build Angular components & apps without (or with less) @NgModules - i.e., Standalone Components allow you to write less (boilerplate) code.
+* You build a standalone component by adding the standalone: true property/value pair to the @Component decorator
+```Typescript
+@Component({
+  standalone: true,
+  selector: 'app-cmp',
+  template: '<h1>I work standalone!</h1>'
+})
+export class SomeComponent {}
+```
+
+## Using Custom Components
+* Now that we registered our component, let's use it
+* We can't add it to index, instead we go to the app.component.HTML where we want to add it
+  * We can add the selector name we gave as an HTML element <app-name>
+* Based on the examples, app-server is our own selector we created and should now recompile where we see the component there
+* That's how we use our component then with their selector after adding to app module and displaying on the html file
