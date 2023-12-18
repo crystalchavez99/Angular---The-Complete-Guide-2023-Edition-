@@ -17,3 +17,12 @@
   * This bootstraps starts our application by passing AppModule into it
   * Now if we look at App.Module it contains the bootstrap key whihc lists all components known to Angular to analyze our index.html
   * Angular gets started, bootstraps an App which is our AppComponent reads the setup
+
+## Components are Important
+* Components are a key feature
+* It builds our whole app by composing it from couple of components
+* We start with app component or root by default when created
+  * It holds our entire app, nest our components to it
+* Core idea is to build components
+
+## Creating a new component
