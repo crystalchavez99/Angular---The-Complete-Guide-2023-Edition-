@@ -15,3 +15,16 @@ logic, and the template
 * There are other forms of data binding
 * Two way data binding is where we able to react events and output at the same time
   * Syntax: `[[ngModel]] = "data"`
+
+## String Interpolation
+* You don't want to hard code the output, it's more realistic that our component contains info about a specific instance
+* If we want to output specific properties from the instance, we would have dyanimc fields for it and derive from the TS code, it all outputs a string
+  * We would assign the property or variables in the component class
+    * Example: serverId = 10;
+  * Then we would output these properties in the template
+    * Ex: <p>Server with ID {{serverId}} is {{serverStatus}}</p>
+    * Which string interpolation comes into play and returns a string
+* Only restriction is not being able to write multi-line expressions here, so not if or for control structures
+  * Can use ternary expression though
+* Alongside properties, we can also data bind functions with string interpolation
+  * Ex: {{function()}}
