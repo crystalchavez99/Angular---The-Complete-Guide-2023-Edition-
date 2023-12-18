@@ -28,3 +28,13 @@ logic, and the template
   * Can use ternary expression though
 * Alongside properties, we can also data bind functions with string interpolation
   * Ex: {{function()}}
+
+## Propery Binding
+* Now let's think we want to add new servers to the list, so we will need a button add server
+* We might want to add a new property in the class to allow new creation of server with value of false, so they aren't able to interact
+  * Now the moment we are able to change to true, we want to reflect the dynamic functionality where it can allow users to take action with the button
+* There is we bind to our HTML code where after 2 seconds it will allow the user to use the button to create a new server
+* To make it functionally dynamic we bind it by enclosing in square brackets
+  * Ex: [disabled] = "function"
+* We using Property Binding as it makes it easier to interact with DOM to change things in runtime which that is in place binding
+* There are binding HTML elements
