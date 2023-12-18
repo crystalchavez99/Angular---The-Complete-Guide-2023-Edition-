@@ -101,3 +101,17 @@ export class SomeComponent {}
 * With the created component representing as the parent to nest our children components inside we go to the component.ts to check the selector
 * We can go to the `app.component.html` and update the selector to use the new one instead of the old
   * Looks the same now except we nested the same component twice showing two of them now
+
+## Working with Component Templates
+* So far we only used the external template file and no styling yet
+* We can also use inline template meaning HTML code in the TS code
+* We go to the component, and right now we have it point to an HTML
+  * We can change the templateURL to template but one must be present at all times
+```Typescript
+    templateUrl: './servers.component.HTML'
+    // or
+    template: '<app-server></app-server><app-server></app-server>'
+```
+  * Can not wrap line but looks like nothing has changed
+  * If you want to wrap use back ticks instead of single quotation marks
+* External file is preferred 
