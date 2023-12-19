@@ -56,3 +56,14 @@ logic, and the template
     * Syntax: `(event name)="function()"`
     * This method will get executed whenever the event is occurred
 * Event binding works like that, we use parentheses of the event name and equal it with the code we want to execute with quotation marks
+
+## Passing and Using Data with Event Binding
+* We will have a input or some form control that we may want user to input data, where we can apply an event listener to execute a function
+* Now once the user inputs data, we want to output the user entered from the value of the form
+  * Do this by passing dollar sign event here `$event` in the function, its a reserved variable name to use in the template when event binding
+  * The quotation marks contain the dollar sign event will be the data emitted with that event
+* So the input and click are default events which will ship the data when fired, the click will gives us an object and input gives us some data about the event
+* Now we capture the data with the dollar sign event passed as the argument to the method we're executing
+* We can apply anything we want from the value we received
+  * To access value from event, `event.target.value`
+  * Can explicitiy inform by adding HTMLInputElement tag in the front `(<HTMLInputElement>event.target).value;`
