@@ -34,3 +34,20 @@
     <p>No server was created!</p>
 </ng-template>
 ```
+
+## Angular 17: Alternative "if" Syntax
+* Instead of using *ngIf, you can use a built-in @if template control flow statement
+```
+@if (someCondition) {
+  <p>Only visible if 'someCondition' is true</p>
+}
+```
+
+## Style wiht ngStyle
+* There's going to times you want to style certain components, we use the directive ngStyle
+  * ngStyle is not used often and we use property binding on this directive
+    * bracket is not part of ngStyle we just want to apply apply some property on this directive
+  * Expects to get a JS Object so we define key value paris of the style name and value
+    * The style key names have to be camelCase or wrap them in single quotation marks for the exact syntax of the style property
+* The advantage of ngStyle is it updates dynamically so after a render it changes
+  * attribute directive added like a attribute and is using property binding to configure it

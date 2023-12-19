@@ -29,7 +29,7 @@ logic, and the template
 * Alongside properties, we can also data bind functions with string interpolation
   * Ex: {{function()}}
 
-## Propery Binding
+## Property Binding
 * Now let's think we want to add new servers to the list, so we will need a button add server
 * We might want to add a new property in the class to allow new creation of server with value of false, so they aren't able to interact
   * Now the moment we are able to change to true, we want to reflect the dynamic functionality where it can allow users to take action with the button
@@ -39,7 +39,7 @@ logic, and the template
 * We using Property Binding as it makes it easier to interact with DOM to change things in runtime which that is in place binding
 * There are binding HTML elements
 
-## String Interpolation vs Data Binding
+## String Interpolation vs Property Binding
 * In the case to output current value of allow new server then string interpolation would be the use
 * Now we can easily use property binding instead of string inter by simply binding the property to the element such as innerText to equal variable
   * Ex: `<p [innerText]="allowNewServer"></p>`
