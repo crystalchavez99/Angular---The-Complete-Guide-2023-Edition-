@@ -47,3 +47,12 @@ logic, and the template
   * If you want to output something just print, then string inter
   * If you want change some property of an HTML element or directive or component, then use property binding
 * Don't mix the two, if you do it will break the app
+
+## Event Binding
+* We can create a replication of the component through the action of an element or remove the output to be replaced with from that action
+* We can create the property of it to reflect on our HTML and create a method that will get triggered to do something
+* Once we create the method or function to get triggered for an error, we want to start taking event binding into play
+  * We're going to apply an event listner on the element, like a button to execute our function
+    * Syntax: `(event name)="function()"`
+    * This method will get executed whenever the event is occurred
+* Event binding works like that, we use parentheses of the event name and equal it with the code we want to execute with quotation marks
