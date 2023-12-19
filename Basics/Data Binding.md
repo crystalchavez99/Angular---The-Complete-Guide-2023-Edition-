@@ -38,3 +38,12 @@ logic, and the template
   * Ex: [disabled] = "function"
 * We using Property Binding as it makes it easier to interact with DOM to change things in runtime which that is in place binding
 * There are binding HTML elements
+
+## String Interpolation vs Data Binding
+* In the case to output current value of allow new server then string interpolation would be the use
+* Now we can easily use property binding instead of string inter by simply binding the property to the element such as innerText to equal variable
+  * Ex: <p [innerText]="allowNewServer"></p>
+* Wich one should we use?
+  * If you want to output something just print, then string inter
+  * If you want change some property of an HTML element or directive or component, then use property binding
+* Don't mix the two, if you do it will break the app
