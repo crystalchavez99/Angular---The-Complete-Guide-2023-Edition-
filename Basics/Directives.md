@@ -50,4 +50,13 @@
   * Expects to get a JS Object so we define key value paris of the style name and value
     * The style key names have to be camelCase or wrap them in single quotation marks for the exact syntax of the style property
 * The advantage of ngStyle is it updates dynamically so after a render it changes
+* The value is an expression to be evaluated. The resulting non-null value, expressed in the given unit, is assigned to the given style property.
   * attribute directive added like a attribute and is using property binding to configure it
+  * Syntax: <some-element [ngStyle]="{'font-style': styleExp}">...</some-element>
+    * or <some-element [ngStyle]="objExp">...</some-element>
+      * Can apply object key value pairs like in CSS
+
+
+## Apply CSS Class Dynamically with ngClass
+* Related to ngStyle is ngClass, where ngStyle allowed us to change style itself ngClass allows us to dynamically add or remove css classes
+* Super similar to ngStyle syntax
