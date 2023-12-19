@@ -75,3 +75,6 @@ logic, and the template
   * Make sure it is imported in the App Module
 * It will do the following: trigger on input event, update value of the variable in our component
   * Since its two way, it will update the value of the element if we change somewhere else
+
+## Combining all Forms of Data Binding
+* You can apply all bindings in the same component, they work in general and communicate with one another
