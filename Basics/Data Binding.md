@@ -42,7 +42,7 @@ logic, and the template
 ## String Interpolation vs Data Binding
 * In the case to output current value of allow new server then string interpolation would be the use
 * Now we can easily use property binding instead of string inter by simply binding the property to the element such as innerText to equal variable
-  * Ex: <p [innerText]="allowNewServer"></p>
+  * Ex: `<p [innerText]="allowNewServer"></p>`
 * Wich one should we use?
   * If you want to output something just print, then string inter
   * If you want change some property of an HTML element or directive or component, then use property binding
@@ -67,3 +67,11 @@ logic, and the template
 * We can apply anything we want from the value we received
   * To access value from event, `event.target.value`
   * Can explicitiy inform by adding HTMLInputElement tag in the front `(<HTMLInputElement>event.target).value;`
+
+## Two Way Data Binding
+* We can combine both event and property binding for two way binding so instead of just event binding
+* We can replace it with the combination of the syntaxes: `[(ngModel)]`="variable"
+  * We do have to use a special directive called ngModel
+  * Make sure it is imported in the App Module
+* It will do the following: trigger on input event, update value of the variable in our component
+  * Since its two way, it will update the value of the element if we change somewhere else
