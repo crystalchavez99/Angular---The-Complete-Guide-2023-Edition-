@@ -67,3 +67,12 @@
   * Syntax: <li *ngFor="let item of items;">...</li>
 * We use the property we defined in what we want to loop through, and assign individual element representation to dynicamically display
   * Content is still static until we pass data to the component
+
+## Angular 17: Alternative "for" Syntax
+* Instead of using *ngFor, you can use a built-in @for template control flow statement.
+```
+@for (item of items; track item.id) {
+  <li>{{ item.title }}</li>
+}
+```
+* The track item.id part is required when using this new syntax - it ensures that Angular can efficiently track and re-render (if needed) the list items.
