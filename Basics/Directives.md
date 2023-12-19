@@ -60,3 +60,10 @@
 ## Apply CSS Class Dynamically with ngClass
 * Related to ngStyle is ngClass, where ngStyle allowed us to change style itself ngClass allows us to dynamically add or remove css classes
 * Super similar to ngStyle syntax
+
+## Outputting Lists with ngFor
+* We can change a list to be dynamic with the `ngFor` directive
+* We place the directive with a start because this is structural and apply to the element you want to dynamically list
+  * Syntax: <li *ngFor="let item of items;">...</li>
+* We use the property we defined in what we want to loop through, and assign individual element representation to dynicamically display
+  * Content is still static until we pass data to the component
