@@ -76,3 +76,9 @@
 }
 ```
 * The track item.id part is required when using this new syntax - it ensures that Angular can efficiently track and re-render (if needed) the list items.
+
+## Using index in ngFor
+* Can extract the current index of the current iteration
+  * With let, bind to a variable name like i and equal it to index which is a reserved epxression
+  * It will give you the access to the index of the current iteration and update along the way
+  * Syntax:<li *ngFor="let item of items; i = index;"></li>
