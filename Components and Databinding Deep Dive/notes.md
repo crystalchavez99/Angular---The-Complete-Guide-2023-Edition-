@@ -80,3 +80,15 @@
       * This will not use viewencapsulation but other components will still use it
     * Native: uses ShadowDom tech, gives you same result as before with emulated but only in browsers supported
       * Most cases choose emulated
+
+## Use Local Reference in Templates
+* There will be cases where we don't want to use two way binding
+* Other option we would have to place is a local reference on that element
+  * Can be placed on any HTML element so not only input, Syntax: `#name`
+  * It will reference to this element
+    * All its properties
+* We can pass it to the method of event binding etc,,
+  * You can place anywhere in template BUT ONLY TEMPLATE NOT IN TS CODE
+  * just make sure that if we do use reference in a method just make sure the function in the TS file will accept a parameter
+* Local reference is anice feature to get access in some elements and use directly in that template like outputting ot passing it on
+  * Now we can use it to create instances
