@@ -1,4 +1,4 @@
-# The Basics of Angular Part 4
+# Debugging
 
 ## Understand error messages
 * Open your console and it will tell you some indication of an idea
