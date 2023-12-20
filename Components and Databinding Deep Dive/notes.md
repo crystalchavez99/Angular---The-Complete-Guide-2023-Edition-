@@ -33,3 +33,9 @@
   * Need to add a decorator @Input and execute it
 * We are able to expose this property to the app, any parent component hosting the component is now able to bind to property
 * We can succesfully pass properties down to the component and bind to property in the component
+
+## Assign Alias to Custom Properties
+* There's more to configure our properties such as we binding with @Input
+* May not want to use the same property outside of the component as you use inside it
+* You can assign an alias, which can be passed in the @Input with the property you want to have it outside
+  * But once you give it an alias it has to be the alias whe nbinding outside the component
