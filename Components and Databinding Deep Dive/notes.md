@@ -140,3 +140,4 @@
   * Fifth: ngAfterContentCheck (called every time projected content has been checked)
   * Sixth: ngAfterViewInit (called after component and children view has been init)
   * Seventh: ngAfterViewChecked (called every time viewss have been checked)
+* Rarely to use them all
