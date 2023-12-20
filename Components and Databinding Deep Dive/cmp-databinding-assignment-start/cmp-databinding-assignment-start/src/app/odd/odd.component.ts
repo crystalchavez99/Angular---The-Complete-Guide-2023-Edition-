@@ -8,7 +8,6 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 export class OddComponent implements OnInit{
   @Input() number: Number;
 
-  constructor(){};
   ngOnInit(): void {
 
   }
