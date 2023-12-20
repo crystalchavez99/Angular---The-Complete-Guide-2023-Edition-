@@ -113,4 +113,30 @@
   * It gives Element Ref, but if you want the underlying element add `.nativeElement` right after and then .value for the value
 * We now have passed directly from the template via the method being element itself
 * So now without two way binding local references pass to methods or fetched through View Child
-* 
+
+
+## Projecting Content into Components with ng-content
+* There are more ways to pass data around
+* Last way for now as we may have times with complex HTML and want to pass into a component from outside and dont wanna set inisde
+* Any content placed between the tags of own component is lost by default
+  * Simply removed from the dom
+* Can be changed by a directive, the directive is the ngContent
+  * Syntax: <ng-content></ng-content>
+  * Serves as a hook can place in component to makr place for Angular where it should any content it finds between them
+
+## Component LifeCycle
+* `ngOnIinit()` is a lifecycle hook and Aungular supports it
+* If a new component is created it will instant a new version and add to DOM
+  * Angular goes through different phases in the process, hook these phases and execute code
+  * First Phase: Hook into ngOnChanges (Called after bound input property changes)
+    * Executed mulitple times right at the start when a new comp is created and is always called when one of bind input properties changed ex: @Input
+  * Second Phase: ngOnInit (gets executed once compo is initialized)
+    * Angular finished the basic initial so props can be access and object created
+    * Will run after the constructor
+  * Third Phase: ngDoCheck ( called during every change detection run)
+    * Runs multiple times as it runs every change that it detectes
+    * Angular determins when changes on template or component
+  * Fourth: ngAfterContentInit (called after ng-content has been project into view)
+  * Fifth: ngAfterContentCheck (called every time projected content has been checked)
+  * Sixth: ngAfterViewInit (called after component and children view has been init)
+  * Seventh: ngAfterViewChecked (called every time viewss have been checked)
