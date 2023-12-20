@@ -34,8 +34,8 @@
 * We are able to expose this property to the app, any parent component hosting the component is now able to bind to property
 * We can succesfully pass properties down to the component and bind to property in the component
 
-## Assign Alias to Custom Properties
-* There's more to configure our properties such as we binding with @Input
+## Assign Alias to Custom Properties and Events
+* There's more to configure our properties such as we binding with @Input or @Output
 * May not want to use the same property outside of the component as you use inside it
 * You can assign an alias, which can be passed in the @Input with the property you want to have it outside
   * But once you give it an alias it has to be the alias whe nbinding outside the component
@@ -61,3 +61,11 @@
   * That is how we emit our own events, being able to pass the data
 * However we did add @Input to make property bindable from outside so we need add something to the events to make it listenable from outside
   * Another decorator @Output as we're not receiving data into the component but passing outside the component
+
+## Custom Property and Event Binding Summary
+* Component communication is a key feature
+* @Input gives it the ability to make properties bindables from outside the parent component using this component
+* @Ouput allows parent components using this component to listen to your own events created with Event Emitter
+* Issue is to talk between 2 components stting next to each is complicated emit a ment in one component, change in parent and then pass down to child
+  * They can growe complex
+* Not practical to chain outputs and inputs
