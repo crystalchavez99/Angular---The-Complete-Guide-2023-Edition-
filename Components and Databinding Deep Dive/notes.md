@@ -141,3 +141,9 @@
   * Sixth: ngAfterViewInit (called after component and children view has been init)
   * Seventh: ngAfterViewChecked (called every time viewss have been checked)
 * Rarely to use them all
+
+## Get Access to ng-content with @ContentChild
+* Let's say we place local reference on a html element and want to use in another component, we could use ViewChild because its in template of the parent where it will be passed later
+* Though it wont work because it may not be part of the view, part of content
+* We have ContentChild allows us to pass selector (reference)
+  * store in property and use it like ViewChild
