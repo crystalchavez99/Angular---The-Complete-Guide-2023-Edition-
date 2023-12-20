@@ -11,4 +11,15 @@ export class AppComponent {
   constructor(){
 
   }
+
+  grabEven(event:number){
+    if(event % 2 === 0){
+      this.number = event;
+    }
+  }
+  grabOdd(event:number){
+    if(event % 2 === 1){
+      this.number = event;
+    }
+  }
 }

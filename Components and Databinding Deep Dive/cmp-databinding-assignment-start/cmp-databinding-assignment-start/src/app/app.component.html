@@ -17,4 +17,14 @@
 </div>
 <div class="container">
   <app-game-control [number]="number"></app-game-control>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-even (even)="grabEven($event)"></app-even>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd (odd)="grabOdd($event)"></app-odd>
+    </div>
+  </div>
 </div>
