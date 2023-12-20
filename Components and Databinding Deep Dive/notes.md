@@ -69,3 +69,14 @@
 * Issue is to talk between 2 components stting next to each is complicated emit a ment in one component, change in parent and then pass down to child
   * They can growe complex
 * Not practical to chain outputs and inputs
+
+## Understand View Encapsulation
+* Angular enforces style encapsulation
+* It can be overwritten though
+  * Add `encapsulation` property in the component decorator and as a value `ViewEncapsulation`
+  * ViewEncapsulation has three modes:
+    * Emulate is default
+    * None: we don't see strange attributes being added to the elements
+      * This will not use viewencapsulation but other components will still use it
+    * Native: uses ShadowDom tech, gives you same result as before with emulated but only in browsers supported
+      * Most cases choose emulated
