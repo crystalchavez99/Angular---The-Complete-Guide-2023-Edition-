@@ -39,3 +39,25 @@
 * May not want to use the same property outside of the component as you use inside it
 * You can assign an alias, which can be passed in the @Input with the property you want to have it outside
   * But once you give it an alias it has to be the alias whe nbinding outside the component
+
+## Bind to Custom Events
+* We will have a component where something changes and want to inform our parent component (the component that has another component implemented inside it)
+  * Instead of passing down, wer're passing up
+* For example: the app component implements a cockpit component which, the child has two buttons that can change something where a new server or new blueprint is created
+  * It will have methods where it will now refer new instances which we to pass to the parent
+* In the child component calling at the parent html file we could listen to the change (the selector we template inside the parent ) PARENT FILE
+  * Event doesn't exist by default, we listen some event (any name we want the event to be) and it will execute what we assign to
+  * Syntax: <tag (event)="method($event)>
+    * the $event catches the data
+* We get the data based on what we bind event to where it will call the method and the event should give us the data to expect and catch with $event
+* Now the child component needs to emit the events as it will wait for events that we binded CHILD FILE
+  * Create properties named after the events
+    * Have to make are events we can emit
+    * They will be assigned a value `new Event Emitter<>` which is a generic type
+      * In between the arrows we define the type of event data we are to emit
+* Event Emitter is an object in Angular that allows us to emit our own events
+* Now that the properties we created have turned into Event Emitters we can now call on them and can emit the method
+  * Inside the methods we emit the new event and pass in the object we want to create or pass
+  * That is how we emit our own events, being able to pass the data
+* However we did add @Input to make property bindable from outside so we need add something to the events to make it listenable from outside
+  * Another decorator @Output as we're not receiving data into the component but passing outside the component
