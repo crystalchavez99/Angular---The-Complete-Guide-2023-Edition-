@@ -16,15 +16,17 @@
   </div>
 </div>
 <div class="container">
-  <app-game-control [number]="number"></app-game-control>
+  <app-game-control
+  (intervalNumber)="onIntervalNumber($event)"
+  ></app-game-control>
   <div class="row">
     <div class="col-xs-12">
-      <app-even (even)="grabEven($event)"></app-even>
+      <app-even (number)="number"></app-even>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <app-odd (odd)="grabOdd($event)"></app-odd>
+      <app-odd (number)="number"></app-odd>
     </div>
   </div>
 </div>

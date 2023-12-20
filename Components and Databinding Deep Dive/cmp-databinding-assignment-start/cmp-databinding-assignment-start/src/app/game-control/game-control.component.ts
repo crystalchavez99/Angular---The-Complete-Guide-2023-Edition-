@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,7 +6,9 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
   styleUrl: './game-control.component.css'
 })
 export class GameControlComponent implements OnInit{
-  @Input() number;
+  number = 0;
+  @Output() intervalNumber = new EventEmitter<Number>;
+  // @Output() oddCreated = new EventEmitter<Number>;
   intervalId;
   constructor() {
 
@@ -14,12 +16,24 @@ export class GameControlComponent implements OnInit{
   ngOnInit(){
 
   }
-  emitNumberSecond(){
+  startGame(){
     this.intervalId=setInterval(() =>{
-      this.number+=1
+      this.intervalNumber.emit(this.number + 1);
+      this.number+=1;
     }, 1000)
   }
-  stopEmits(){
+  stopGame(){
     clearInterval(this.intervalId)
   }
+
+  // sendEven(){
+  //   console.log(this.number,"even")
+  //   this.evenCreated.emit(this.number)
+  // }
+  // sendOdd(){
+  //   console.log(this.number,"odd")
+
+  //   this.oddCreated.emit(this.number)
+  // }
+
 }

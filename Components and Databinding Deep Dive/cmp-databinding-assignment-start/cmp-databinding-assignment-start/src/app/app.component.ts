@@ -6,20 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  number = 0;
-
-  constructor(){
-
+  onIntervalNumber(number){
+    console.log(number)
   }
+  // number = 0;
 
-  grabEven(event:number){
-    if(event % 2 === 0){
-      this.number = event;
-    }
-  }
-  grabOdd(event:number){
-    if(event % 2 === 1){
-      this.number = event;
-    }
-  }
+
+  // grabEven(event:number){
+  //   if(event % 2 === 0){
+  //     this.number = event;
+  //   }
+  // }
+  // grabOdd(event:number){
+  //   if(event % 2 === 1){
+  //     this.number = event;
+  //   }
+  // }
 }
