@@ -92,3 +92,25 @@
   * just make sure that if we do use reference in a method just make sure the function in the TS file will accept a parameter
 * Local reference is anice feature to get access in some elements and use directly in that template like outputting ot passing it on
   * Now we can use it to create instances
+
+## @ViewChild() in Angular 8+
+* In Angular 8+, the @ViewChild() syntax is changed slightly
+  * Old Syntax:
+  ```
+  @ViewChild('serverContentInput') serverContentInput: ElementRef;
+  ```
+  * New Syntax:
+  ```
+  @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
+  ```
+
+## Access to Template & Dom with @ViewChild
+* Another way to access local ref or element direct from within TS Code
+* We learned to pass reference inside a method but sometimes we want access before we call a method
+* There is a decorator we can use @ViewChild('selector of element')
+  * Not CSS selector, name of local reference
+  * Syntax: @ViewChild('reference name') = reference name
+  * It gives Element Ref, but if you want the underlying element add `.nativeElement` right after and then .value for the value
+* We now have passed directly from the template via the method being element itself
+* So now without two way binding local references pass to methods or fetched through View Child
+* 
