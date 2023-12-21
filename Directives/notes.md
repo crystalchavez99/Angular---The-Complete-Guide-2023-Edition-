@@ -10,3 +10,4 @@
 * Structural Directives
   * Looks like a HTML attribute but with a * in front
   * Affects whole area in the DOM elements get added or removed
+
