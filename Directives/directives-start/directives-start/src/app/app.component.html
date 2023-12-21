@@ -16,7 +16,8 @@
         </div>
         <div *ngIf="!onlyOdd"><li
           class="list-group-item"
-          *ngFor="let even of evenNumbers">
+          *ngFor="let even of evenNumbers"
+          appBetterHighlight>
           {{even}}
         </li></div>
       </ul>
