@@ -36,3 +36,12 @@ constructor(private service: Service)
   * Pass into the constructor and import the service and pass as provider in providers
   * Assign property to equal a start value then in ngOnInit reassign to the service property
   * If you are emitting events you can remove it and inject the service
+
+## Understand Hiearchical Injector
+* Angular dependence inject is a hierachical injector
+  * If we provide a service in one components, it knows how to create for that component and children
+* Highest possible level is App
+  * If we provide in the App Module then its in the whole app
+  * If we provide in App Component its available fro all components but not for other services
+    * If so remove it from providers in rest of the components
+  * Any other component is available for compo and children
