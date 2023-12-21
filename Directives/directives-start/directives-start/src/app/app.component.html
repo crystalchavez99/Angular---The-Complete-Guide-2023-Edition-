@@ -14,13 +14,16 @@
           {{odd}}
         </li>
         </div>
-        <div *ngIf="!onlyOdd"><li
+        <div *appUselss="onlyOdd"><li
           class="list-group-item"
           *ngFor="let even of evenNumbers"
-          appBetterHighlight>
+          appBetterHighlight
+          defaultColor="yellow"
+          >
           {{even}}
         </li></div>
       </ul>
+      <p appBetterHighlight [defaultColor]="'yellow'">Test</p>
     </div>
   </div>
 </div>
