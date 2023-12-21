@@ -14,3 +14,16 @@
 * Import Service in the corresponding Components
   * Thus you can create instance of service
   * Ex: `const service = new ServiceClassName()`
+
+## Inject Service into Components
+* Inform Angular we require instance of service
+* Add constructor to class where we want to use our service
+```
+constructor(private service: Service)
+```
+* This will tell Angular we need instance of this service
+* Now we need to provide a service
+  * meaning how to create it
+  * add one extra property at the component decorator
+  * the `providers` array passe in the service
+* When analyze it should able to give service, setup, and bind component
