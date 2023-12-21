@@ -27,3 +27,12 @@ constructor(private service: Service)
   * add one extra property at the component decorator
   * the `providers` array passe in the service
 * When analyze it should able to give service, setup, and bind component
+
+## Now to store and manage data with Service
+* Create Service
+* Any data you have in app would move to the new service
+* Now create logic methods that can be used over the components
+* We can inject our service to the components we want
+  * Pass into the constructor and import the service and pass as provider in providers
+  * Assign property to equal a start value then in ngOnInit reassign to the service property
+  * If you are emitting events you can remove it and inject the service
