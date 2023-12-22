@@ -28,3 +28,13 @@ Users
     * `RouterModule.forRoot(appRoutes)`
 * We have to place the component where to render the route, in app component html remove selectors of components and only have router-outlet
   * Syntax: `<router-outlet></router-outlet>`
+
+## Navigate Routes with Router Link
+* Angular has a special directive to parse the path
+* `routerLink` is able to parse the string where we could just pass slash and serves as a anchor tag
+  * Replace the a href with the `routerLink`
+* You can use dynamic values to generate the link.
+  * pass an array of path segments, followed by the params for each segment
+    * Ex: ` ['/team', teamId, 'user', userName, {details: true}]`
+    * generates a link to `/team/11/user/bob;details=true`
+* Much faster too
